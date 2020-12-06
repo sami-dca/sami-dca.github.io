@@ -1,4 +1,5 @@
 import React from "react";
+import {useTranslation} from 'react-i18next';
 //import { Link } from "react-router-dom";
 
 // components
@@ -7,6 +8,9 @@ import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
 export default function Landing() {
+
+
+  const{ t , i18n} = useTranslation();
   return (
     <>
       <Navbar transparent />
@@ -33,7 +37,7 @@ export default function Landing() {
                     Sami 
                   </h1>
                   <p className="mt-4 text-lg text-gray-300">
-                    The decentralized communication application
+                   {t("DescrShort")} 
                   </p>
                 </div>
               </div>
@@ -70,9 +74,9 @@ export default function Landing() {
                     {/* <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award"></i>
                     </div> */}
-                    <h6 className="text-xl font-semibold">Accessible from anywhere</h6>
+                    <h6 className="text-xl font-semibold">{t("Accessible from anywhere")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                    You can access to the app on any device (Windows , Mac , IOS , Android and also via a web client) 
+                    {t("You can access to the app on any device (Windows , Mac , IOS , Android and also via a web client)")}
                     </p>
                   </div>
                 </div>
@@ -84,9 +88,9 @@ export default function Landing() {
                     {/* <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
                       <i className="fas fa-retweet"></i>
                     </div> */}
-                    <h6 className="text-xl font-semibold">Secure</h6>
+                    <h6 className="text-xl font-semibold">{t("Secure")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                     Your communications are secure , anytime , accross all devices 
+                    {t("Your communications are secure , anytime , accross all devices")}  
                     </p>
                   </div>
                 </div>
@@ -98,11 +102,9 @@ export default function Landing() {
                     {/* <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
                       <i className="fas fa-fingerprint"></i>
                     </div> */}
-                    <h6 className="text-xl font-semibold">Decentralized app</h6>
+                    <h6 className="text-xl font-semibold">{t("Decentralized app")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                    Blockchain technology-based follow a decentralisation model
-                    where peer-to-peer transfer takes place without any interference
-                    of intermediary
+                    {t("Blockchain technology-based follow a decentralisation model where peer-to-peer transfer takes place without any interference of intermediary")}
                     </p>
                   </div>
                 </div>
@@ -281,10 +283,10 @@ export default function Landing() {
             <div className="flex flex-wrap text-center justify-center">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold text-white">
-                  Download App
+                  {t("Download")}
                 </h2>
                 <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                  Available versions
+                  {t("Available versions")}
                 </p>
               </div>
             </div>
@@ -294,10 +296,10 @@ export default function Landing() {
                   <i className="fas fa-window text-xl"></i>
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
-                  Window
+                  {t("Windows")}
                 </h6>
                 <p className="mt-2 mb-4 text-gray-500">
-                  Desktop App
+                 {t("DesktopApp")} 
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
@@ -305,10 +307,10 @@ export default function Landing() {
                   <i className="fas fa-ios text-xl"></i>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
-                  IOS
+                  {t("IOS")}
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">
-                  Ios Version
+                  {t("Ios Version")}
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
@@ -316,10 +318,10 @@ export default function Landing() {
                   <i className="fas fa-android text-xl"></i>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
-                  Android
+                  {t("Android")}
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">
-                  Android Version
+                 {t("Android Version")} 
                 </p>
               </div>
             </div>
@@ -330,7 +332,7 @@ export default function Landing() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold">Here are our heroes</h2>
+                <h2 className="text-4xl font-semibold">{t("Here are our heroes")}</h2>
                 {/* <p className="text-lg leading-relaxed m-4 text-gray-600">
                   Lorem Ipsum
                 </p> */}
@@ -347,7 +349,8 @@ export default function Landing() {
                   <div className="pt-6 text-center">
                     {/* <h5 className="text-xl font-bold">Ryan Tompson</h5> */}
                     <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                      Web Developer
+                      {t("Web Developer")}
+                      
                     </p>
                     <div className="mt-6">
                       <button
@@ -382,7 +385,7 @@ export default function Landing() {
                   <div className="pt-6 text-center">
                     {/* <h5 className="text-xl font-bold">Romina Hadid</h5> */}
                     <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                      Marketing Specialist
+                      {t("Marketing Specialist")}
                     </p>
                     <div className="mt-6">
                       <button
@@ -411,7 +414,7 @@ export default function Landing() {
                   <div className="pt-6 text-center">
                     {/* <h5 className="text-xl font-bold">Alexa Smith</h5> */}
                     <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                      UI/UX Designer
+                      {t("UI/UX Designer")}
                     </p>
                     <div className="mt-6">
                       <button

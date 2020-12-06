@@ -1,6 +1,7 @@
 /*eslint-disable*/
 import React from "react";
 import { Link } from "react-router-dom";
+import  i18n from "../../i18n";
 
 // components
 
@@ -8,6 +9,11 @@ import PagesDropdown from "components/Dropdowns/PagesDropdown.js";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+
+  const changelanguage = (ln) => {
+    return () =>
+      i18n.changeLanguage(ln);
+  };
   return (
     <>
       <nav className="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
@@ -91,6 +97,15 @@ export default function Navbar(props) {
                 </button>
               </li>
             </ul>
+
+
+          </div>
+             
+          <div className="text-white text-sm font-bold leading-relaxed inline-block pl-4 mr-4 py-2 whitespace-no-wrap uppercase">
+                      <button onClick={changelanguage('fr')}>FR</button> 
+                      <br/>
+                      <button onClick={changelanguage('en')}>EN</button> 
+
           </div>
         </div>
       </nav>

@@ -14,6 +14,7 @@ import "assets/styles/tailwind.css";
 
 import Landing from "views/Landing.js";
 import Profile from "views/Profile.js";
+import "./i18n";
 // import Index from "views/Index.js";
 
 ReactDOM.render(
