@@ -25,18 +25,18 @@ export default function Footer() {
             x="0"
             y="0"
           >
-            <polygon
+            {/* <polygon
               className="text-gray-300 fill-current"
               points="2560 0 2560 100 0 100"
-            ></polygon>
+            ></polygon> */}
           </svg>
         </div>
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-center lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
-              <h4 className="text-3xl font-semibold">{t("Let's keep in touch!")}</h4>
+              {/* <h4 className="text-3xl font-semibold">{t("Let's keep in touch!")}</h4> */}
               <h5 className="text-lg mt-0 mb-2 text-gray-700">
-              {t("Find us on any of these platforms, we respond 1-2 business days.")}
+              {t("Find us on any of these platforms")}
                 
               </h5>
               <div className="mt-6 lg:mb-0 mb-6">
@@ -46,12 +46,12 @@ export default function Footer() {
                 >
                   <i className="fab fa-discord"></i>
                 </button>
-                <button
+                {/* <button
                   className="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
                   <i className="fab fa-facebook-square"></i>
-                </button>
+                </button> */}
                 {/* <button
                   className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
@@ -66,7 +66,6 @@ export default function Footer() {
                 </button>
               </div>
             </div>
-            
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
                 <div className="w-full lg:w-4/12 px-4 ml-auto">
@@ -77,7 +76,7 @@ export default function Footer() {
                     <li>
                       <a
                         className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        // href="https://www.creative-tim.com/presentation?ref=nr-footer"
+                        href="https://sami-dca.web.app/"
                       >
                         {t("About Us")}
                         
@@ -86,7 +85,7 @@ export default function Footer() {
                     <li>
                       <a
                         className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        // href="https://blog.creative-tim.com?ref=nr-footer"
+                        href="https://sami-dca.web.app/"
                       >
                         Blog
                       </a>
@@ -94,7 +93,7 @@ export default function Footer() {
                     <li>
                       <a
                         className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        // href="https://github.com/sami-dca/sami-dca.github.io/blob/main?ref=nr-footer"
+                        href="https://sami-dca.web.app/"
                       >
                         Github
                       </a>
@@ -117,7 +116,7 @@ export default function Footer() {
                     <li>
                       <a
                         className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        // href="https://github.com/sami-dca/sami-dca.github.io/blob/main/LICENSE?ref=nr-footer"
+                        href="https://github.com/sami-dca/sami-dca.github.io/blob/main/LICENSE"
                       >
                         MIT License
                       </a>
@@ -125,17 +124,17 @@ export default function Footer() {
                     <li>
                       <a
                         className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        // href="https://creative-tim.com/terms?ref=nr-footer"
+                        href="https://github.com/sami-dca/sami_dca/blob/main/CONTRIBUTING.md"
                       >
-                        Terms & Conditions
+                        Contribution
                       </a>
                     </li>
                     <li>
                       <a
                         className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        // href="https://creative-tim.com/privacy?ref=nr-footer"
+                        href="https://github.com/sami-dca/sami_dca/blob/main/README.md"
                       >
-                        Privacy Policy
+                        Documentation
                       </a>
                     </li>
                     {/* <li>

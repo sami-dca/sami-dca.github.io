@@ -1,16 +1,62 @@
-import React from "react";
+import React  from "react";
 import {useTranslation} from 'react-i18next';
 //import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 // components
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
+
+
+
 export default function Landing() {
 
+  function submitRequest(e) {
+
+  e.preventDefault();
+
+
+  console.log(e.target);
+
+    emailjs.sendForm('service_1crbwab', 'sami_demo_templ', e.target, 'user_xJLFKkprVZqTCo5aIuVoS')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    
+      e.target.reset()
+  }
+
+      
 
   const{ t , i18n} = useTranslation();
+
+  // const [email, setEmail] = useState('');
+  // const [message, setMessage] = useState('');
+
+  // const submitRequest = async (e) => {
+  //   e.preventDefault();
+  //   console.log({ email, message });
+  //   const response = await fetch("/access", { 
+  //     method: 'POST', 
+  //     headers: { 
+  //         'Content-type': 'application/json'
+  //     }, 
+  //     body: JSON.stringify({email, message}) 
+  // }); 
+  //   const resData = await response.json(); 
+  //   if (resData.status === 'success'){
+  //     alert("Message Sent."); 
+  //     this.resetForm()
+  // }else if(resData.status === 'fail'){
+  //     alert("Message failed to send.")
+  // }
+  // };
+
+
   return (
     <>
       <Navbar transparent />
@@ -21,7 +67,8 @@ export default function Landing() {
             style={{
               backgroundImage:
                 //"url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')",
-                "url('https://images.unsplash.com/photo-1553905346-3b6e399115b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')",
+                //"url('https://images.unsplash.com/photo-1553905346-3b6e399115b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')",
+               "url('https://media.discordapp.net/attachments/768471132285304853/798842136312414208/index1.png?width=619&height=619')" ,
             }}
           >
             <span
@@ -47,7 +94,7 @@ export default function Landing() {
             className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
             style={{ transform: "translateZ(0)" }}
           >
-            <svg
+            {/*<svg
               className="absolute bottom-0 overflow-hidden"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="none"
@@ -56,11 +103,11 @@ export default function Landing() {
               x="0"
               y="0"
             >
-              <polygon
+               <polygon
                 className="text-gray-300 fill-current"
                 points="2560 0 2560 100 0 100"
-              ></polygon>
-            </svg>
+              ></polygon> 
+            </svg>*/}
           </div>
         </div>
 
@@ -76,7 +123,7 @@ export default function Landing() {
                     </div> */}
                     <h6 className="text-xl font-semibold">{t("Accessible from anywhere")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                    {t("You can access to the app on any device (Windows , Mac , IOS , Android and also via a web client)")}
+                    {t("L'application est actuellement disponible sur Windows, Linux et MacOS.Les réseaux peuvent être constitués de quelques personnes sur un réseau local,ou de plusieurs milliers d'ordinateurs partout dans le monde")}
                     </p>
                   </div>
                 </div>
@@ -90,7 +137,7 @@ export default function Landing() {
                     </div> */}
                     <h6 className="text-xl font-semibold">{t("Secure")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                    {t("Your communications are secure , anytime , accross all devices")}  
+                    {t("Les communications sont encryptées, par design, de bout-en-bout,grâce à des algorithmes d'encryption mondialement adoptés")}  
                     </p>
                   </div>
                 </div>
@@ -104,7 +151,7 @@ export default function Landing() {
                     </div> */}
                     <h6 className="text-xl font-semibold">{t("Decentralized app")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                    {t("Blockchain technology-based follow a decentralisation model where peer-to-peer transfer takes place without any interference of intermediary")}
+                    {t("Inspiré de la blockchain et entièrement décentralisé,le réseau n'est détenu par personne (pas même nous !) . N'importe qui peut créer un réseau pour discuter avec ses amis, sa famille, ses collègues, ou quiconque vraiment !")}
                     </p>
                   </div>
                 </div>
@@ -258,7 +305,7 @@ export default function Landing() {
           </div>
         </section> */}
         
-        <section className="pb-20 relative block bg-gray-900">
+        <section className="pb-10 relative block bg-gray-900">
           <div
             className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
             style={{ transform: "translateZ(0)" }}
@@ -272,10 +319,10 @@ export default function Landing() {
               x="0"
               y="0"
             >
-              <polygon
+              {/* <polygon
                 className="text-gray-900 fill-current"
                 points="2560 0 2560 100 0 100"
-              ></polygon>
+              ></polygon> */}
             </svg>
           </div>
 
@@ -298,38 +345,37 @@ export default function Landing() {
                 <h6 className="text-xl mt-5 font-semibold text-white">
                   {t("Windows")}
                 </h6>
-                <p className="mt-2 mb-4 text-gray-500">
+                {/* <p className="mt-2 mb-4 text-gray-500">
                  {t("DesktopApp")} 
-                </p>
+                </p> */}
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
                 <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <i className="fas fa-ios text-xl"></i>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
-                  {t("IOS")}
+                  {t("Linux")}
                 </h5>
-                <p className="mt-2 mb-4 text-gray-500">
+                {/* <p className="mt-2 mb-4 text-gray-500">
                   {t("Ios Version")}
-                </p>
+                </p> */}
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
                 <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <i className="fas fa-android text-xl"></i>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
-                  {t("Android")}
+                  {t("Mac OS")}
                 </h5>
-                <p className="mt-2 mb-4 text-gray-500">
+                {/* <p className="mt-2 mb-4 text-gray-500">
                  {t("Android Version")} 
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
         </section>
-
         <section className="pt-20 pb-48">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4">            
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">{t("Here are our heroes")}</h2>
@@ -339,6 +385,91 @@ export default function Landing() {
               </div>
             </div>
             <div className="flex flex-wrap">
+              {/* 1 */}
+            <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src={require("assets/img/team-2-800x800.jpg")}
+                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                  />
+                  <div className="pt-6 text-center">
+                    {/* <h5 className="text-xl font-bold">Romina Hadid</h5> */}
+                    <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                      {t("Network Designer")}
+                    </p>
+                    <p
+                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
+                    Hugo 
+                      </p>
+                    <div className="mt-6">
+                
+                      <button
+                        className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                      >
+                        <i className="fab fa-facebook-f"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* 2 */}
+            <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src={require("assets/img/team-2-800x800.jpg")}
+                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                  />
+                  <div className="pt-6 text-center">
+                    {/* <h5 className="text-xl font-bold">Romina Hadid</h5> */}
+                    <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                      {t("Marketing Manager")}
+                    </p>
+                    <p
+                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
+                    Hugo Ramalhosa 
+                      </p>
+
+                    <div className="mt-2">
+                
+                      <button
+                        className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                      >
+                        <i className="fab fa-linkedin" href = "linkedin.com/in/hugo-ramalhosa"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+               {/*3  */}
+            <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src={require("assets/img/team-2-800x800.jpg")}
+                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                  />
+                  <div className="pt-6 text-center">
+                    {/* <h5 className="text-xl font-bold">Romina Hadid</h5> */}
+                    <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                      {t("Developer")}
+                    </p>
+                    <div className="mt-6">
+                     
+                      <button
+                        className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                      >
+                        <i className="fab fa-facebook-f"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              {/* 4 */}
               <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div className="px-6">
                   <img
@@ -375,17 +506,18 @@ export default function Landing() {
                   </div>
                 </div>
               </div>
+              {/* 5 */}
               <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                 <div className="px-6">
-                  <img
+                  {/* <img
                     alt="..."
                     src={require("assets/img/team-2-800x800.jpg")}
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    {/* <h5 className="text-xl font-bold">Romina Hadid</h5> */}
+                  /> */}
+                  {/* <div className="pt-6 text-center">
+                     <h5 className="text-xl font-bold">Romina Hadid</h5> 
                     <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                      {t("Marketing Specialist")}
+                      {t("Marketing Manager")}
                     </p>
                     <div className="mt-6">
                       <button
@@ -401,10 +533,12 @@ export default function Landing() {
                         <i className="fab fa-facebook-f"></i>
                       </button>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+
+              {/* 6 */}
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 mt-10 ml-20">
                 <div className="px-6">
                   <img
                     alt="..."
@@ -416,65 +550,62 @@ export default function Landing() {
                     <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
                       {t("UI/UX Designer")}
                     </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
+                    <p
+                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
+                    Shakeh Tshagharyan
+                      </p>
+                    <div className="mt-2">
+                     
                       <button
                         className="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>
                       </button>
-                      <button
-                        className="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button>
+                   
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              {/* 7 */}
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 mt-10">
                 <div className="px-6">
                   <img
                     alt="..."
-                    src={require("assets/img/team-4-470x470.png")}
+                    src="https://gravatar.com/avatar/86f372388dc7c62af2f3a1966e59c375?s=1024"
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
                   <div className="pt-6 text-center">
                     {/* <h5 className="text-xl font-bold">Jenna Kardi</h5> */}
                     <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                      Founder and CEO
+                    {t("Project Manager")}
+
                     </p>
-                    <div className="mt-6">
+
+                    <p
+                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
+                        Lilian BOULARD
+                      </p>
+                    <div className="mt-2">
                       {/* <button
                         className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-dribbble"></i>
                       </button> */}
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
+  
+                      {/* <button
                         className="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>
-                      </button>
+                      </button> */}
                       <button
                         className="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
-                        <i className="fab fa-instagram"></i>
+                      
+                        <i className="fab fa-github" href="https://github.com/Phaide"></i>
                       </button>
                     </div>
                   </div>
@@ -483,76 +614,70 @@ export default function Landing() {
             </div>
           </div>
         </section>
+       
 
-        {/* <section className="relative block py-24 lg:pt-0 bg-gray-900">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+        <section className=" mt-50  pt-50 pb-48">
+          <div className="container  mx-auto px-4">
+            <div className="flex flex-wrap justify-center lg:-mt 15 ">
               <div className="w-full lg:w-6/12 px-4">
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-                  <div className="flex-auto p-5 lg:p-10">
+                  <div className="flex-auto p-10 lg:p-10">
                     <h4 className="text-2xl font-semibold">
-                      Want to work with us?
+                      Voulez-vous nous contacter ?
                     </h4>
                     <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                      Complete this form and we will get back to you in 24
-                      hours.
+                      Remplissez ce formulaire , nous vous répondrons dans un délai de 48h
                     </p>
+
+                    <form className="contact-form" onSubmit={submitRequest}>
+
                     <div className="relative w-full mb-3 mt-8">
-                      <label
-                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                        htmlFor="full-name"
-                      >
-                        Full Name
+                      <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="full-name">
+                        Nom & Prénom
                       </label>
-                      <input
-                        type="text"
-                        className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
-                        placeholder="Full Name"
+                      <input name = "name"
+                        type="text" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150" placeholder="Nom & Prénom"
                       />
                     </div>
-
+            
                     <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                        htmlFor="email"
-                      >
+                      <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="email" >
                         Email
                       </label>
-                      <input
-                        type="email"
-                        className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
-                        placeholder="Email"
-                      />
+                      <input type="email" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                       placeholder="Email" name = "mail"/>
+                    
                     </div>
-
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                        htmlFor="message"
-                      >
+            
+                    <div>
+                    <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="message" >
                         Message
                       </label>
-                      <textarea
+                    <textarea
                         rows="4"
                         cols="80"
                         className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                         placeholder="Type a message..."
-                      />
-                    </div>
-                    <div className="text-center mt-6">
-                      <button
-                        className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                        type="button"
-                      >
-                        Send Message
-                      </button>
-                    </div>
+                        name = "message"
+                        required />
                   </div>
+
+
+                  <div className="text-center mt-6">
+                      <button className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                       type="submit">
+                          Envoyez
+                      </button>
+                    </div> 
+
+
+                  </form>
+                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section> */}
+        </section> 
       </main>
       <Footer />
     </>

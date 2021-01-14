@@ -40,7 +40,7 @@ export default function Navbar(props) {
             }
             id="example-navbar-warning"
           >
-            <ul className="flex flex-col lg:flex-row list-none mr-auto">
+            {/* <ul className="flex flex-col lg:flex-row list-none mr-auto">
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
@@ -50,12 +50,12 @@ export default function Navbar(props) {
                   Documentation
                 </a>
               </li>
-            </ul>
+            </ul> */}
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               {/* <li className="flex items-center">
                 <PagesDropdown />
               </li> */}
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   // href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-react%2F%23%2F"
@@ -64,7 +64,7 @@ export default function Navbar(props) {
                   <i className="lg:text-gray-300 text-gray-500 fab fa-facebook text-lg leading-lg " />
                   <span className="lg:hidden inline-block ml-2">Facebook</span>
                 </a>
-              </li>
+              </li> */}
 
               <li className="flex items-center">
                 <a
@@ -80,7 +80,7 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://github.com/sami-dca"
+                  href="https://github.com/sami-dca/sami_dca"
                   target="_blank"
                 >
                   <i className="lg:text-gray-300 text-gray-500 fab fa-github text-lg leading-lg " />
@@ -100,11 +100,20 @@ export default function Navbar(props) {
 
 
           </div>
+
+          <select >
+             <option value="fra">Français</option>
+            <option value="eng" onClick ={changelanguage('en')}>Anglais</option>
+                      {/* <button onClick={changelanguage('fr')}>FR</button> 
+                      <button onClick={changelanguage('en')}>EN</button>  */}
+           </select>
              
           <div className="text-white text-sm font-bold leading-relaxed inline-block pl-4 mr-4 py-2 whitespace-no-wrap uppercase">
+        
                       <button onClick={changelanguage('fr')}>FR</button> 
                       <br/>
                       <button onClick={changelanguage('en')}>EN</button> 
+
 
           </div>
         </div>
