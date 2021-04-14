@@ -11,7 +11,7 @@ export default function Footer() {
   // eslint-disable-next-line 
   return (
     <>
-      <footer className="relative bg-gray-300 pt-8 pb-6">
+      <footer className="relative bg-gray-900 pt-8 pb-6">
         <div
           className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
           style={{ transform: "translateZ(0)" }}
@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="flex flex-wrap text-center lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
               {/* <h4 className="text-3xl font-semibold">{t("Let's keep in touch!")}</h4> */}
-              <h5 className="text-lg mt-0 mb-2 text-gray-700">
+              <h5 className="text-lg mt-0 mb-2 text-white">
               {t("Find us on any of these platforms")}
                 
               </h5>
@@ -44,7 +44,7 @@ export default function Footer() {
                   className="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <i className="fab fa-discord"></i>
+                  <a className="fab fa-discord" href="https://discord.gg/Hcc6YTkpYV"></a>
                 </button>
                 {/* <button
                   className="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
@@ -62,7 +62,7 @@ export default function Footer() {
                   className="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <i className="fab fa-github"></i>
+                  <a className="fab fa-github" href="https://github.com/sami-dca/sami_dca"></a>
                 </button>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function Footer() {
                   <ul className="list-unstyled">
                     <li>
                       <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                        className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
                         href="https://sami-dca.web.app/"
                       >
                         {t("About Us")}
@@ -84,7 +84,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                        className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
                         href="https://sami-dca.web.app/"
                       >
                         Blog
@@ -92,7 +92,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                        className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
                         href="https://sami-dca.web.app/"
                       >
                         Github
@@ -109,13 +109,13 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
-                  <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">
+                  <span className="block uppercase text-white text-sm font-semibold mb-2">
                     Other Resources
                   </span>
                   <ul className="list-unstyled">
                     <li>
                       <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                        className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
                         href="https://github.com/sami-dca/sami-dca.github.io/blob/main/LICENSE"
                       >
                         MIT License
@@ -123,7 +123,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                        className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
                         href="https://github.com/sami-dca/sami_dca/blob/main/CONTRIBUTING.md"
                       >
                         Contribution
@@ -131,7 +131,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                        className="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
                         href="https://github.com/sami-dca/sami_dca/blob/main/README.md"
                       >
                         Documentation
@@ -151,9 +151,9 @@ export default function Footer() {
             </div>
           </div>
           <hr className="my-6 border-gray-400" />
-          <div className="flex flex-wrap items-center md:justify-between justify-center">
+          <div className="flex flex-wrap items-center md:justify-between justify-center bg-gray-900">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div className="text-sm text-gray-600 font-semibold py-1">
+              <div className="text-sm text-white font-semibold py-1">
                 Copyright © {new Date().getFullYear()} Made by Sami
                 {/* <a
                   // href="#"

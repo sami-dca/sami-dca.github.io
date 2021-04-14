@@ -306,7 +306,7 @@ export default function Landing() {
         </section> */}
         
         <section className="pb-10 relative block bg-gray-900">
-          <div
+          {/* <div
             className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
             style={{ transform: "translateZ(0)" }}
           >
@@ -319,12 +319,12 @@ export default function Landing() {
               x="0"
               y="0"
             >
-              {/* <polygon
+               <polygon
                 className="text-gray-900 fill-current"
                 points="2560 0 2560 100 0 100"
-              ></polygon> */}
+              ></polygon> 
             </svg>
-          </div>
+          </div> */}
 
           <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
             <div className="flex flex-wrap text-center justify-center">
@@ -332,7 +332,7 @@ export default function Landing() {
                 <h2 className="text-4xl font-semibold text-white">
                   {t("Download")}
                 </h2>
-                <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+                <p className="text-lg leading-relaxed mt-4 mb-4 text-white">
                   {t("Available versions")}
                 </p>
               </div>
@@ -340,7 +340,7 @@ export default function Landing() {
             <div className="flex flex-wrap mt-12 justify-center">
               <div className="w-full lg:w-3/12 px-4 text-center">
                 <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-window text-xl"></i>
+                  <i className="fab fa-windows text-xl"></i>
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
                   {t("Windows")}
@@ -351,7 +351,7 @@ export default function Landing() {
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
                 <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-ios text-xl"></i>
+                  <i className="fab fa-linux text-xl"></i>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
                   {t("Linux")}
@@ -362,7 +362,7 @@ export default function Landing() {
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
                 <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-android text-xl"></i>
+                  <i className="fab fa-apple text-xl"></i>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
                   {t("Mac OS")}
@@ -400,9 +400,9 @@ export default function Landing() {
                     </p>
                     <p
                         className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
-                    Hugo 
+                    Hugo Sester
                       </p>
-                    <div className="mt-6">
+                    <div className="mt-1">
                 
                       <button
                         className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -432,7 +432,7 @@ export default function Landing() {
                     Hugo Ramalhosa 
                       </p>
 
-                    <div className="mt-2">
+                    <div className="mt-1">
                 
                       <button
                         className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -457,7 +457,11 @@ export default function Landing() {
                     <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
                       {t("Developer")}
                     </p>
-                    <div className="mt-6">
+                    <p
+                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
+                    Alexis Noël 
+                      </p>
+                    <div className="mt-1">
                      
                       <button
                         className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -481,27 +485,28 @@ export default function Landing() {
                     {/* <h5 className="text-xl font-bold">Ryan Tompson</h5> */}
                     <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
                       {t("Web Developer")}
-                      
                     </p>
-                    <div className="mt-6">
+
+                    <p
+                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
+                    Aros FONTON 
+                      </p>
+
+                    <div className="mt-1">
                       <button
                         className="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>
                       </button>
+                 
                       <button
-                        className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
-                        <i className="fab fa-facebook-f"></i>
+                      
+                        <i className="fab fa-github" href="https://github.com/keffa98"></i>
                       </button>
-                      {/* <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -582,8 +587,7 @@ export default function Landing() {
 
                     </p>
 
-                    <p
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
+                    <p className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">
                         Lilian BOULARD
                       </p>
                     <div className="mt-2">
