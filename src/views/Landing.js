@@ -123,7 +123,7 @@ export default function Landing() {
                     </div> */}
                     <h6 className="text-xl font-semibold">{t("Accessible from anywhere")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                    {t("You can access to the app on any device (Windows , Mac , IOS , Android and also via a web client)")}
+                    {t("accessible descr")}
                     </p>
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export default function Landing() {
                     </div> */}
                     <h6 className="text-xl font-semibold">{t("Secure")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                    {t("Your communications are secure , anytime , accross all devices")}  
+                    {t("Secure descr")}  
                     </p>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ export default function Landing() {
                     </div> */}
                     <h6 className="text-xl font-semibold">{t("Decentralized app")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                    {t("Blockchain technology-based follow a decentralisation model where peer-to-peer transfer takes place without any interference of intermediary")}
+                    {t("Decentralized descr")}
                     </p>
                   </div>
                 </div>
