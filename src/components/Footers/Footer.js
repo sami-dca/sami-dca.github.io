@@ -110,7 +110,7 @@ export default function Footer() {
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
                   <span className="block uppercase text-white text-sm font-semibold mb-2">
-                    Other Resources
+                    {t("OTHER RESOURCES")}
                   </span>
                   <ul className="list-unstyled">
                     <li>

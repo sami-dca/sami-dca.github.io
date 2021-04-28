@@ -105,18 +105,17 @@ export default function Navbar(props) {
 
           </div>
 
-          <select >
+          {/* <select >
              <option value="fra">Français</option>
             <option value="eng" onClick ={changelanguage('en')}>Anglais</option>
-                      {/* <button onClick={changelanguage('fr')}>FR</button> 
-                      <button onClick={changelanguage('en')}>EN</button>  */}
-           </select>
+                      //<button onClick={changelanguage('fr')}>FR</button> 
+                      // <button onClick={changelanguage('en')}>EN</button>  
+           </select> */}
              
           <div className="text-white text-sm font-bold leading-relaxed inline-block pl-4 mr-4 py-2 whitespace-no-wrap uppercase">
         
-                      <button onClick={changelanguage('fr')}>FR</button> 
-                      <br/>
-                      <button onClick={changelanguage('en')}>EN</button> 
+                      <button onClick={changelanguage('fr')}><img className = "pt-1"src={require("assets/img/fra1.png")} /></button> 
+                      <button  onClick={changelanguage('en')}><img className = "pb-1 " src={require("assets/img/eng1.jpg")} /></button> 
 
 
           </div>

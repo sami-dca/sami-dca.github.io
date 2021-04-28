@@ -123,7 +123,7 @@ export default function Landing() {
                     </div> */}
                     <h6 className="text-xl font-semibold">{t("Accessible from anywhere")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                    {t("L'application est actuellement disponible sur Windows, Linux et MacOS.Les réseaux peuvent être constitués de quelques personnes sur un réseau local,ou de plusieurs milliers d'ordinateurs partout dans le monde")}
+                    {t("You can access to the app on any device (Windows , Mac , IOS , Android and also via a web client)")}
                     </p>
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export default function Landing() {
                     </div> */}
                     <h6 className="text-xl font-semibold">{t("Secure")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                    {t("Les communications sont encryptées, par design, de bout-en-bout,grâce à des algorithmes d'encryption mondialement adoptés")}  
+                    {t("Your communications are secure , anytime , accross all devices")}  
                     </p>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ export default function Landing() {
                     </div> */}
                     <h6 className="text-xl font-semibold">{t("Decentralized app")}</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                    {t("Inspiré de la blockchain et entièrement décentralisé,le réseau n'est détenu par personne (pas même nous !) . N'importe qui peut créer un réseau pour discuter avec ses amis, sa famille, ses collègues, ou quiconque vraiment !")}
+                    {t("Blockchain technology-based follow a decentralisation model where peer-to-peer transfer takes place without any interference of intermediary")}
                     </p>
                   </div>
                 </div>
@@ -390,10 +390,10 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src={require("assets/img/team-2-800x800.jpg")}
+                    src={require("assets/img/Hugo S.PNG")}
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
-                  <div className="pt-6 text-center">
+                  <div className="pt-4 text-center">
                     {/* <h5 className="text-xl font-bold">Romina Hadid</h5> */}
                     <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
                       {t("Network Designer")}
@@ -419,7 +419,7 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src={require("assets/img/team-2-800x800.jpg")}
+                    src={require("assets/img/Hugo R.PNG")}
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
                   <div className="pt-6 text-center">
@@ -449,7 +449,7 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src={require("assets/img/team-2-800x800.jpg")}
+                    src={require("assets/img/alexis.PNG")}
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
                   <div className="pt-6 text-center">
@@ -478,12 +478,12 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src={require("assets/img/team-1-800x800.jpg")}
+                    src={require("assets/img/aros.png")}
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
                   <div className="pt-6 text-center">
                     {/* <h5 className="text-xl font-bold">Ryan Tompson</h5> */}
-                    <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    <p className="mt-2 text-sm text-gray-500 uppercase font-semibold">
                       {t("Web Developer")}
                     </p>
 
@@ -547,7 +547,7 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src={require("assets/img/team-3-800x800.jpg")}
+                    src={require("assets/img/Sacha.PNG")}
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
                   <div className="pt-6 text-center">
@@ -577,12 +577,12 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src="https://gravatar.com/avatar/86f372388dc7c62af2f3a1966e59c375?s=1024"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                    src={require("assets/img/Lilian.PNG")}
+                    className="shadow-lg rounded-full mx-auto max-w-120-px pt-5"
                   />
                   <div className="pt-6 text-center">
                     {/* <h5 className="text-xl font-bold">Jenna Kardi</h5> */}
-                    <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    <p className="mt-5 text-sm text-gray-500 uppercase font-semibold">
                     {t("Project Manager")}
 
                     </p>
@@ -627,20 +627,21 @@ export default function Landing() {
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
                   <div className="flex-auto p-10 lg:p-10">
                     <h4 className="text-2xl font-semibold">
-                      Voulez-vous nous contacter ?
+                        {t("Let's keep in touch!")}
                     </h4>
-                    <p className="leading-relaxed mt-1 mb-4 text-gray-600">
+                    {/* <p className="leading-relaxed mt-1 mb-4 text-gray-600">
                       Remplissez ce formulaire , nous vous répondrons dans un délai de 48h
-                    </p>
+                    </p> */}
 
                     <form className="contact-form" onSubmit={submitRequest}>
 
                     <div className="relative w-full mb-3 mt-8">
                       <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="full-name">
-                        Nom & Prénom
+                        
+                        {t("Name")}
                       </label>
                       <input name = "name"
-                        type="text" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150" placeholder="Nom & Prénom"
+                        type="text" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150" placeholder=""
                       />
                     </div>
             
